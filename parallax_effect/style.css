@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(files/background.png) no-repeat;
+    background-size: cover;
+}
+
+.main{
+    perspective: 10px;  
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+header{
+    color: white;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 5px;
+}
+
+.button{
+    background: url(files/button.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    margin: 10px 0 0 20px;
+    filter: drop-shadow(0px 0px 8px black);
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    font-size: 20px;
+    gap: 50px;
+    margin:15px 100px 0 0;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: rgb(213, 213, 213);
+}
+
+a{
+    color: rgb(213, 213, 213);
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.parallax{
+    transform-style: preserve-3d;
+    height: 100%;
+    color: white;
+    transform: translateY(-42.5px);
+}
+
+.parallax .title{
+    position: absolute;
+    top: 0%;
+    left: 23%;
+    z-index: -1;
+    transform: translateZ(-10px) scale(2) translateY(-150px);
+
+}
+
+.parallax .title .tailoring{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 15px;
+    font-size: 100px;
+    transform: translateY(100px);
+    filter: drop-shadow(0px 0px 8px black);
+}
+
+.parallax .title h3{
+    transform: translate(20px,50px);
+    font-family: "Rubik", sans-serif;
+    letter-spacing: 2px;
+    filter: drop-shadow(0px 0px 8px black);
+}
+
+.robo,.tapeleft,.taperight{
+    position: absolute;
+}
+
+.robo{
+    background: url(files/robo.png) no-repeat;
+    background-size: 90%;
+    background-position: center;
+    width: 500px;
+    height: 500px;
+    filter: drop-shadow(0px 0px 8px black);
+    top: 15%;
+    left: 37%;
+    z-index: 2;
+    transform: translateZ(-5px) scale(1.8) translateY(100px);
+    filter: blur(0px);
+    transition: .2s;
+}
+
+.tapeleft{
+    background: url(files/tape_left.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    filter: drop-shadow(0px 0px 10px black);
+    top: 48%;
+    left: -120px;
+    margin-left: 0px;
+    transform: translateZ(-2px) scale(1.3) translateY(50px);
+}
+
+.taperight{
+    background: url(files/tape_right.png) no-repeat;
+    background-size: 85%;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    filter: drop-shadow(0px 0px 10px black);
+    top: 50%;
+    right: -200px;
+    margin-right: 0px;
+    transform: translateZ(-2px) scale(1.4) translateY(-100px);
+}
+
+.newdesign h2{
+    color: white;
+    font-family: "Nunito", sans-serif;
+/*     font-family: "Oswald", sans-serif; */
+    font-size: 70px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-align: center;
+    filter: drop-shadow(0px 0px 10px black);
+}
+
+.designs{
+    margin-top: 120px;
+}
+
+.image1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.image1 img{
+    width: 380px;
+/*     height: 500px; */
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+    border-radius: 10px;
+/*     border: solid rgb(45, 45, 45); */
+    transition: .3s;
+}
+.image1 img:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.image1 p{
+    font-family: "Roboto", sans-serif;
+    width: 550px;
+    height: 400px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    transition: .3s;
+}
+.image1 p:hover{
+    font-size: 21px;
+    transition: .3s;
+}
+
+
+footer{
+/*     border: solid; */
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px black;
+}
+
+.about h3,.contact h3,.service h3{
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 21px;
+    margin-top: 10px;
+    filter: drop-shadow(0px 0px 8px black);
+}
+.about p{
+    font-family: "Roboto", sans-serif;
+    width: 550px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+    margin-top: 10px;
+    filter: drop-shadow(0px 0px 8px black);
+}
+
+.contact h4,.service h4{
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    filter: drop-shadow(0px 0px 8px black);
+}
